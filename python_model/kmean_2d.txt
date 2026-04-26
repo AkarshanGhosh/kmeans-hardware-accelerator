@@ -18,6 +18,7 @@ kmeans_2d.py
       ├── dataset definition
       ├── centroid initialization
       └── function call
+ 
  3. Library Used
 import numpy as np
 ✔ Purpose:
