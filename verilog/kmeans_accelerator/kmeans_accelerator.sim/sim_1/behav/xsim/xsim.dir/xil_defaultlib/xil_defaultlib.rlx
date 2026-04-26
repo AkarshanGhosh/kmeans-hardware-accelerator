@@ -1,0 +1,7 @@
+0.7
+2020.2
+Nov 14 2025
+19:37:27
+D:/programs/kmeans-hardware-accelerator/verilog/kmeans_accelerator/kmeans_accelerator.sim/sim_1/behav/xsim/glbl.v,1756381829,verilog,,,,glbl,,,,,,,,
+D:/programs/kmeans-hardware-accelerator/verilog/kmeans_accelerator/kmeans_accelerator.srcs/sources_1/new/distance_tb.v,1777190506,verilog,,,,distance_tb,,,C:/AMDDesignTools/2025.2/Vivado/data/rsb/busdef,,,,,
+D:/programs/kmeans-hardware-accelerator/verilog/kmeans_accelerator/kmeans_accelerator.srcs/sources_1/new/distance_unit.v,1777188314,verilog,,D:/programs/kmeans-hardware-accelerator/verilog/kmeans_accelerator/kmeans_accelerator.srcs/sources_1/new/distance_tb.v,,distance_unit,,,C:/AMDDesignTools/2025.2/Vivado/data/rsb/busdef,,,,,
