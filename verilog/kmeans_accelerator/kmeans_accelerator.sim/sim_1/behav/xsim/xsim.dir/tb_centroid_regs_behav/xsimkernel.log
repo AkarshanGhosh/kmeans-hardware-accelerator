@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_centroid_regs_behav/xsimk.exe -simmode gui -wdb tb_centroid_regs_behav.wdb -simrunnum 0 -socket 62928
+Design successfully loaded
+Design Loading Memory Usage: 10876 KB (Peak: 10876 KB)
+Design Loading CPU Usage: 31 ms

@@ -1,15 +1,27 @@
 Time resolution is 1 ps
 ============================================
- min_finder_k4 Testbench - Step 2 of 7    
+ centroid_regs Testbench - Step 3 of 7    
 ============================================
-TC1  PASS | D=(100,500,800,1200) | cluster_id=0
-TC2  PASS | D=(900,200,750,1100) | cluster_id=1
-TC3  PASS | D=(5000,3000,400,2200) | cluster_id=2
-TC4  PASS | D=(8000,6000,4000,300) | cluster_id=3
-TC5  PASS | D=(1200,1200,5000,9000) | cluster_id=0
-TC6  PASS | D=(1200,21900,32400,41300) | cluster_id=0
+-- Phase 1: Reset check --
+TC1  PASS | C0 = (255,0,0)
+TC2  PASS | C1 = (0,255,0)
+TC3  PASS | C2 = (0,0,255)
+TC4  PASS | C3 = (255,255,0)
+-- Phase 2: Write centroid 0 --
+TC5  PASS | C0 = (180,120,60)
+TC6  PASS | C1 = (0,255,0)
+-- Phase 3: Write centroid 3 --
+TC7  PASS | C3 = (240,80,10)
+TC8  PASS | C0 = (180,120,60)
+-- Phase 4: Sequential write all 4 --
+TC9  PASS | C0 = (10,20,30)
+TC10  PASS | C1 = (40,50,60)
+TC11  PASS | C2 = (70,80,90)
+TC12  PASS | C3 = (100,110,120)
+-- Phase 5: wr_en=0 must not change registers --
+TC13  PASS | C0 = (10,20,30)
 --------------------------------------------
- Results: 6 PASSED,  0 FAILED
- ALL TESTS PASSED - min_finder_k4 verified.
+ Results: 13 PASSED,  0 FAILED
+ ALL TESTS PASSED - centroid_regs verified.
 ============================================
-$finish called at time : 60 ns : File "D:/programs/kmeans-hardware-accelerator/verilog/kmeans_accelerator/kmeans_accelerator.srcs/sim_1/new/tb_min_finder_k4.v" Line 110
+$finish called at time : 76 ns : File "D:/programs/kmeans-hardware-accelerator/verilog/kmeans_accelerator/kmeans_accelerator.srcs/sim_1/new/tb_centroid_regs.v" Line 166
