@@ -1,0 +1,4 @@
+Running: xsim.dir/cluster_tb_behav/xsimk.exe -simmode gui -wdb cluster_tb_behav.wdb -simrunnum 0 -socket 64184
+Design successfully loaded
+Design Loading Memory Usage: 10860 KB (Peak: 10860 KB)
+Design Loading CPU Usage: 46 ms
