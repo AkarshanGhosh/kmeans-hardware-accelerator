@@ -1,0 +1,33 @@
+# Vivado generated files
+*.jou
+*.log
+*.str
+*.bit
+*.bin
+*.dcp
+*.rpt
+*.wdb
+*.pb
+
+# Vivado generated folders inside any project
+**/*.cache/
+**/*.gen/
+**/*.hw/
+**/*.ip_user_files/
+**/*.runs/
+**/*.sim/
+
+# Keep Vivado source folder and project file
+!verilog/
+!verilog/kmeans_accelerator/
+!verilog/kmeans_accelerator/kmeans_accelerator.xpr
+!verilog/kmeans_accelerator/kmeans_accelerator.srcs/
+!verilog/kmeans_accelerator/kmeans_accelerator.srcs/**
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env/*.wdb
+*.vcd
+*.fst
