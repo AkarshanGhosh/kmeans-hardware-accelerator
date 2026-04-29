@@ -1,27 +1,117 @@
 Time resolution is 1 ps
 ============================================
- centroid_regs Testbench - Step 3 of 7    
+ K-Means Hardware Accelerator - Step 7/7  
 ============================================
--- Phase 1: Reset check --
-TC1  PASS | C0 = (255,0,0)
-TC2  PASS | C1 = (0,255,0)
-TC3  PASS | C2 = (0,0,255)
-TC4  PASS | C3 = (255,255,0)
--- Phase 2: Write centroid 0 --
-TC5  PASS | C0 = (180,120,60)
-TC6  PASS | C1 = (0,255,0)
--- Phase 3: Write centroid 3 --
-TC7  PASS | C3 = (240,80,10)
-TC8  PASS | C0 = (180,120,60)
--- Phase 4: Sequential write all 4 --
-TC9  PASS | C0 = (10,20,30)
-TC10  PASS | C1 = (40,50,60)
-TC11  PASS | C2 = (70,80,90)
-TC12  PASS | C3 = (100,110,120)
--- Phase 5: wr_en=0 must not change registers --
-TC13  PASS | C0 = (10,20,30)
+Initial centroids loaded:
+  C0: R=251 G=193 B=120
+  C1: R=221 G=253 B=225
+  C2: R=242 G=158 B=6
+  C3: R=176 G=160 B=138
 --------------------------------------------
- Results: 13 PASSED,  0 FAILED
- ALL TESTS PASSED - centroid_regs verified.
+Asserting start...
+  iter=0 pixel=0 cluster=3
+Accelerator started. Waiting for pixels...
+--------------------------------------------
+  iter=0 pixel=1 cluster=3
+  iter=0 pixel=2 cluster=3
+  iter=0 pixel=3 cluster=3
+  iter=0 pixel=4 cluster=3
+  iter=0 ... (remaining omitted)
+--------------------------------------------
+Iter 0 done | C0:223 C1:30 C2:361 C3:410 px
+--------------------------------------------
+  iter=1 pixel=0 cluster=3
+  iter=1 pixel=1 cluster=3
+  iter=1 pixel=2 cluster=3
+  iter=1 pixel=3 cluster=3
+  iter=1 pixel=4 cluster=3
+  iter=1 ... (remaining omitted)
+--------------------------------------------
+Iter 1 done | C0:334 C1:25 C2:207 C3:458 px
+--------------------------------------------
+  iter=2 pixel=0 cluster=3
+  iter=2 pixel=1 cluster=3
+  iter=2 pixel=2 cluster=3
+  iter=2 pixel=3 cluster=3
+  iter=2 pixel=4 cluster=3
+  iter=2 ... (remaining omitted)
+--------------------------------------------
+Iter 2 done | C0:333 C1:25 C2:192 C3:474 px
+--------------------------------------------
+  iter=3 pixel=0 cluster=1
+  iter=3 pixel=1 cluster=3
+  iter=3 pixel=2 cluster=2
+  iter=3 pixel=3 cluster=1
+  iter=3 pixel=4 cluster=2
+  iter=3 ... (remaining omitted)
+--------------------------------------------
+Iter 3 done | C0:423 C1:223 C2:358 C3:20 px
+--------------------------------------------
+  iter=4 pixel=0 cluster=1
+  iter=4 pixel=1 cluster=1
+  iter=4 pixel=2 cluster=1
+  iter=4 pixel=3 cluster=1
+  iter=4 pixel=4 cluster=1
+  iter=4 ... (remaining omitted)
+--------------------------------------------
+Iter 4 done | C0:332 C1:452 C2:224 C3:16 px
+--------------------------------------------
+  iter=5 pixel=0 cluster=1
+  iter=5 pixel=1 cluster=1
+  iter=5 pixel=2 cluster=1
+  iter=5 pixel=3 cluster=1
+  iter=5 pixel=4 cluster=1
+  iter=5 ... (remaining omitted)
+--------------------------------------------
+Iter 5 done | C0:329 C1:460 C2:212 C3:23 px
+--------------------------------------------
+  iter=6 pixel=0 cluster=1
+  iter=6 pixel=1 cluster=1
+  iter=6 pixel=2 cluster=1
+  iter=6 pixel=3 cluster=1
+  iter=6 pixel=4 cluster=1
+  iter=6 ... (remaining omitted)
+--------------------------------------------
+Iter 6 done | C0:330 C1:459 C2:211 C3:24 px
+--------------------------------------------
+  iter=7 pixel=0 cluster=0
+  iter=7 pixel=1 cluster=0
+  iter=7 pixel=2 cluster=0
+  iter=7 pixel=3 cluster=0
+  iter=7 pixel=4 cluster=0
+  iter=7 ... (remaining omitted)
+--------------------------------------------
+Iter 7 done | C0:304 C1:265 C2:365 C3:90 px
+--------------------------------------------
+  iter=8 pixel=0 cluster=0
+  iter=8 pixel=1 cluster=0
+  iter=8 pixel=2 cluster=0
+  iter=8 pixel=3 cluster=0
+  iter=8 pixel=4 cluster=0
+  iter=8 ... (remaining omitted)
+--------------------------------------------
+Iter 8 done | C0:589 C1:303 C2:50 C3:82 px
+--------------------------------------------
+  iter=9 pixel=0 cluster=0
+  iter=9 pixel=1 cluster=0
+  iter=9 pixel=2 cluster=1
+  iter=9 pixel=3 cluster=0
+  iter=9 pixel=4 cluster=0
+  iter=9 ... (remaining omitted)
+--------------------------------------------
+Iter 9 done | C0:232 C1:337 C2:250 C3:205 px
+--------------------------------------------
 ============================================
-$finish called at time : 76 ns : File "D:/programs/kmeans-hardware-accelerator/verilog/kmeans_accelerator/kmeans_accelerator.srcs/sim_1/new/tb_centroid_regs.v" Line 166
+ DONE - all iterations complete            
+============================================
+Total pixels processed: 10240
+
+Final centroids:
+  C0: R=80 G=40 B=21
+  C1: R=90 G=1 B=22
+  C2: R=35 G=155 B=196
+  C3: R=25 G=12 B=119
+============================================
+ Compare with Python final centroids       
+============================================
+$finish called at time : 103385 ns : File "D:/programs/kmeans-hardware-accelerator/verilog/kmeans_accelerator/kmeans_accelerator.srcs/sim_1/new/tb_kmeans_top.v" Line 146
