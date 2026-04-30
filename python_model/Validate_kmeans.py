@@ -7,10 +7,10 @@ from tkinter import Tk, filedialog
 #  Tcl console output here
 # ─────────────────────────────────────────────
 HARDWARE_CENTROIDS = np.array([
-    [80,  40,  21 ],   # C0   ← copy from Vivado console
-    [90,  1,   22 ],   # C1   ← copy from Vivado console
-    [35,  155, 196],   # C2   ← copy from Vivado console
-    [25,  12,  119],   # C3   ← copy from Vivado console
+    [187,  181,  182 ],   # C0   ← copy from Vivado console
+    [234,  164, 28 ],   # C1   ← copy from Vivado console
+    [65,  65, 64 ],   # C2   ← copy from Vivado console
+    [9,  88,  226 ],   # C3   ← copy from Vivado console
 ], dtype=np.float32)
 
 K = 4
