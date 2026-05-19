@@ -356,5 +356,4 @@ Feel free to use, modify, and distribute with attribution.
 *Built with Verilog HDL · Verified with Xilinx Vivado · Validated with Python*
 
 </div>
-EOF
-echo "README written — $(wc -l < /mnt/user-data/outputs/README.md) lines"
+
